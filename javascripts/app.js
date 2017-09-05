@@ -49,9 +49,10 @@ function moveForward(rover){
   console.log("moveForward was called")
 
   if (rover.direction === "N"){
-  rover.coordinates[1] = rover.coordinates[1] - 1;
-  rover.coordinates[0] = rover.coordinates[0]
+    rover.coordinates[1] = rover.coordinates[1] - 1;
+    rover.coordinates[0] = rover.coordinates[0]
   }
+
   if (rover.direction === "S") {
     rover.coordinates[1] = rover.coordinates[1] + 1;
     rover.coordinates[0] = rover.coordinates[0];
@@ -70,9 +71,15 @@ function moveForward(rover){
   console.log("You are at coordinates: " + "X:" + rover.coordinates[0] + " and " + "Y:" + rover.coordinates[1])
   }
 
-function commands(str){
+function commands(lists) {
+  str = lists
+  str = str.toString();
+  
+  console.log(str);
 
-  for (var i = 0; i < str.length; i ++) {
+  for (var i = 0; i < str.length; i++) {
+
+
     switch(str){
       case "f":
       moveForward(rover);
