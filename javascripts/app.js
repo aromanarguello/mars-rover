@@ -69,3 +69,20 @@ function moveForward(rover){
   console.log("You are facing: " + rover.direction)
   console.log("You are at coordinates: " + "X:" + rover.coordinates[0] + " and " + "Y:" + rover.coordinates[1])
   }
+
+function commands(str){
+
+  for (var i = 0; i < str.length; i ++) {
+    switch(str){
+      case "f":
+      moveForward(rover);
+      break;
+      case "r":
+      turnRight(rover);
+      break;
+      case "l":
+      turnLeft(rover)
+      break;
+    }
+  }
+}
