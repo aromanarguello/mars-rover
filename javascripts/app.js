@@ -72,40 +72,25 @@ function moveForward(rover){
   }
 
 function commands(lists) {
+  
   var str = lists
-  var str = str.split("");
+  var str = str.split(""); // turned the results into an array
   console.log(str);
-
-
-
 
   for (var i = 0; i < str.length; i++) {
 
-      if (str === "r"){
+      if (str[i] === "r"){
         turnRight(rover);
-
       }
-
-      if (str === "l"){
+      if (str[i] === "l"){
         turnLeft(rover);
-
       }
 
-      if (str === "f"){
+      if (str[i] === "f"){
         moveForward(rover);
-
       }
-
-//     switch(str){
-//       case "f":
-//       moveForward(rover);
-//       break;
-//       case "r":
-//       turnRight(rover);
-//       break;
-//       case "l":
-//       turnLeft(rover)
-//       break;
-//     }
+  }
+  for(i; i < str.length; i++) {
+    console.log("You have travelled: " + rover.travelLog)
   }
 }
