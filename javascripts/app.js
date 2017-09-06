@@ -72,24 +72,40 @@ function moveForward(rover){
   }
 
 function commands(lists) {
-  str = lists
-  str = str.toString();
-  
+  var str = lists
+  var str = str.split("");
   console.log(str);
+
+
+
 
   for (var i = 0; i < str.length; i++) {
 
+      if (str === "r"){
+        turnRight(rover);
 
-    switch(str){
-      case "f":
-      moveForward(rover);
-      break;
-      case "r":
-      turnRight(rover);
-      break;
-      case "l":
-      turnLeft(rover)
-      break;
-    }
+      }
+
+      if (str === "l"){
+        turnLeft(rover);
+
+      }
+
+      if (str === "f"){
+        moveForward(rover);
+
+      }
+
+//     switch(str){
+//       case "f":
+//       moveForward(rover);
+//       break;
+//       case "r":
+//       turnRight(rover);
+//       break;
+//       case "l":
+//       turnLeft(rover)
+//       break;
+//     }
   }
 }
