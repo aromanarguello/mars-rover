@@ -77,6 +77,8 @@ function commands(lists) {
 
   var str = lists
   var str = str.split(""); // turned the results into array behavior for iteration loop
+  var travelLog = rover.travelLog
+  var coordinates = rover.coordinates
 
 
   for (var i = 0; i < str.length; i++) {
@@ -90,13 +92,12 @@ function commands(lists) {
 
       if (str[i] === "f"){
         moveForward(rover);
-        coordinates = rover.travelLog += rover.coordinates;
-        rover.travelLog = coordinates;
-
+        // rover.travelLog += rover.coordinates, need to find a way
+        // to record the travel log into from str to arrays
 
 
       }
-
+      console.log(rover.coordinates);
   }
 console.log(rover.travelLog);
 }
