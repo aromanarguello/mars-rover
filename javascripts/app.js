@@ -90,13 +90,23 @@ function commands(lists) {
         turnLeft(rover);
       }
 
+      if (rover.coordinates[0] < 0) {
+        console.log("Can't proceed, out of bound");
+        break;
+      }
+
+      if (rover.coordinates[1] < 0) {
+        console.log("Can't proceed, out of bound.");
+        break;
+      }
+
       if (str[i] === "f"){
         moveForward(rover);
-        // rover.travelLog += rover.coordinates, need to find a way
+        //rover.travelLog += rover.coordinates, need to find a way
         // to record the travel log into from str to arrays
-
-
       }
+
+
       console.log(rover.coordinates);
   }
 console.log(rover.travelLog);
